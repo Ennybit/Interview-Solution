@@ -23,11 +23,11 @@ namespace ConsoleApp1
             {
                 if (num % 2 == 0)
                 {
-                    return "odd";
+                    return $"{num} is an odd";
                 }
                 else
                 {
-                    return "even";
+                    return $"{num} is an even";
                 }
 
             }
@@ -53,14 +53,16 @@ namespace ConsoleApp1
             public string Greet(string name)
             {
                 return $"Hello, {name}!";
-            }
+            } 
         }
 
         static void Main(string[] args)
         {
             Task trt = new Task();
             trt.Task1();
-            Console.WriteLine(trt.Task2(4));
+            Console.WriteLine("input a number ");
+            int number  = Int32.Parse(Console.ReadLine());
+            Console.WriteLine(trt.Task2(number));
             trt.Task3();
             trt.Task4();
             Console.WriteLine(trt.Greet("alice"));
